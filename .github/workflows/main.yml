@@ -1,0 +1,19 @@
+name: deno
+
+on:
+   push:
+    branches: ["main"]
+    pull_request:
+    branches: ["main"]
+
+    permissions:
+    contents: read
+
+    jobs: 
+    test:
+    
+      runs-out: unbuntu-latest
+
+      steps:
+      - name: setup repo
+      uses: actions/checkout@v4
